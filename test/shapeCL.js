@@ -20,17 +20,17 @@ class Rectangle extends Shape {
 }
 class Square extends Shape {
     render() {
-        return `<rect x="10" y="10" height="100%" width="100%" fill="${this.color}"/>`
+        return `<rect x="50"  height="200" width="200" fill="${this.color}"/>`
     }
 }
 class Ellipse extends Shape {
     render() {
-        return `<ellipse cx="75" cy="75" rx="20" ry="5" height="100%" width="100%" fill="${this.color}"/>`
+        return `<ellipse cx="75" cy="75" rx="20" ry="5" height="200" width="100%" fill="${this.color}"/>`
     }
 }
 class Triangle extends Shape {
     render() {
-        return `<polygon points="200,10 250,190 150,190" fill="${this.color}"/>`
+        return `<polygon points="150, 18 244, 182 56, 182" fill="${this.color}"/>`
     }
 }
 

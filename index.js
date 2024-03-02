@@ -32,8 +32,8 @@ class Svg {
     render(){
         return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${this.shapeBuilder}${this.textBuilder}</svg>`
     }
-    setTextElement(text, color){
-        this.textBuilder = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}"/>${text}</text>`
+    setTextElement( text, color ){
+        this.textBuilder = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
     }
     setShape(shape){
         this.shapeBuilder = shape.render()
@@ -46,7 +46,7 @@ async function init() {
     const answers = await inquirer.prompt(questions)
     
     if (answers.text.length < 0 && answers.text.length >= 4) return console.log('Invalid Input! Please enter up to three characters.')
-    Circle, Rectangle, Square, Ellipse, Triangle
+
     const userShapeInput = answers["shape"]
 
         if (userShapeInput === 'Circle') {
@@ -63,7 +63,7 @@ async function init() {
             console.log('Shape input invalid.')
         }
     const svg = new Svg()
-    svg.setTextElement((answers["text"], (answers["text-color"])))
+    svg.setTextElement(answers["text"], answers["text-color"])
     svg.setShape(userShape)
     svgString = svg.render()
 
