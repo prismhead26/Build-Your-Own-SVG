@@ -26,5 +26,10 @@ class Ellipse extends Shape {
         return `<ellipse cx="75" cy="75" rx="20" ry="5" height="100%" width="100%" fill="${this.color}"/>`
     }
 }
+class Triangle extends Shape {
+    render() {
+        return `<polygon points="200,10 250,190 150,190" fill="${this.color}"/>`
+    }
+}
 
-module.exports = {Circle, Rectangle, Square, Ellipse}
+module.exports = {Circle, Rectangle, Square, Ellipse, Triangle}

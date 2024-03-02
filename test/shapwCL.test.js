@@ -29,3 +29,10 @@ describe('ellipse', () => {
         expect(shape.render()).toEqual(`<ellipse cx="75" cy="75" rx="20" ry="5" height="100%" width="100%" fill="${color}"/>`)
     })
 })
+describe('triangle', () => {
+    it('renders correctly', () => {
+        const color = 'blue'
+        const shape = new Triangle(color)
+        expect(shape.render()).toEqual(`<ellipse cx="75" cy="75" rx="20" ry="5" height="100%" width="100%" fill="${color}"/>`)
+    })
+})
