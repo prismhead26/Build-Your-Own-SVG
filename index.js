@@ -48,32 +48,19 @@ async function init() {
     if (answers.text.length < 0 && answers.text.length >= 4) return console.log('Invalid Input! Please enter up to three characters.')
     Circle, Rectangle, Square, Ellipse, Triangle
     const userShapeInput = answers["shape"]
-    let userShape;
-        switch(userShapeInput) {
-            case "Circle":
-                userShape = new Circle()
-                break
-            case "Rectangle":
-                userShape = new Rectangle()
-                break
-            case "Square":
-                userShape = new Square()
-                break
-            case "Ellipse":
-                userShape = new Ellipse()
-                break
-            case "Triangle":
-                userShape = new Triangle()
-                userShape.setColor(answers["shape-color"])
-                break
-            default:
-                console.log('Invalid Shape')
-                break
-        }
+
         if (userShapeInput === 'Circle') {
-            userShape = new Circle()
+            userShape = new Circle(answers["shape-color"])
+        } else if (userShapeInput === 'Rectangle') {
+            userShape = new Rectangle(answers["shape-color"])
+        } else if (userShapeInput === 'Square') {
+            userShape = new Square(answers["shape-color"])
+        } else if (userShapeInput === 'Ellipse') {
+            userShape = new Ellipse(answers["shape-color"])
+        } else if (userShapeInput === 'Triangle') {
+            userShape = new Triangle(answers["shape-color"])
         } else {
-            
+            console.log('Shape input invalid.')
         }
     const svg = new Svg()
     svg.setTextElement((answers["text"], (answers["text-color"])))

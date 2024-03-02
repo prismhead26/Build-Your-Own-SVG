@@ -3,7 +3,9 @@ class Shape {
         // this.color = function (color){
         //     this.color = color
         this.color = color
-        
+        // setColor(color){
+        //     this.color=(color);
+        // }
     }
 }
 class Circle extends Shape {
