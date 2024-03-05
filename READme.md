@@ -33,6 +33,14 @@
   Step 6: Once completed, user will be notified within the cmd terminal thus creating the "logo.svg." Feel free to rename.
 
   ## Links
+  Screenshots:
+  ![Screenshot](./assets/images/Screenshot.png)
+
+
+  Youtube:
+  [Youtube link](https://www.youtube.com)
+
+
 
   ## Features
   Javascript variables, destructuring, async/await functions, etc.
