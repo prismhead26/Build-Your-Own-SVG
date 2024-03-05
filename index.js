@@ -3,6 +3,7 @@ const inquirer = require('inquirer')
 const { Circle, Rectangle, Square, Ellipse, Triangle } = require('./test/shapeCL')
 const fs = require('fs')
 
+// prompted questions
 const questions = [
     {
         name: 'text',
@@ -23,14 +24,14 @@ const questions = [
         message: 'Shape = Enter a color keyword (OR a hexadecimal number)'
     },
 ]
-
+// create SVG
 class Svg {
     constructor(){
         this.textBuilder = ''
         this.shapeBuilder = ''
     }
     render(){
-        return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${this.shapeBuilder}${this.textBuilder}</svg>`
+        return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">${this.shapeBuilder}${this.textBuilder}</svg>`
     }
     setTextElement( text, color ){
         this.textBuilder = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
