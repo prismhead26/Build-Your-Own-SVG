@@ -17,7 +17,7 @@
   <br>
   Step 2: Install Nodejs 
   <br>
-  Step 3: Install a cource-code editor like VsCode
+  Step 3: Install a source-code editor like VsCode
   
   ## Usage Instructions:
   Step 1: Open in VsCode(preferred) or another source-code editor 
