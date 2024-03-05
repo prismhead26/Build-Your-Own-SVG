@@ -24,7 +24,7 @@ const questions = [
         message: 'Shape = Enter a color keyword (OR a hexadecimal number)'
     },
 ]
-// create SVG
+// create SVG class constructor and methods setShape, setTextElement, and render to return the svgString
 class Svg {
     constructor(){
         this.textBuilder = ''
@@ -40,16 +40,16 @@ class Svg {
         this.shapeBuilder = shape.render()
     }
 }
-
+// async function initializes the app and awaits for inquirer answers
 async function init() {
     console.log('Welcome! Generator initializing...')
 
     const answers = await inquirer.prompt(questions)
-    
+    // condition for text length
     if (answers.text.length < 0 && answers.text.length >= 4) return console.log('Invalid Input! Please enter up to three characters.')
 
     const userShapeInput = answers["shape"]
-
+        // creating new shape object depending on userShapeInput passing in shape data
         if (userShapeInput === 'Circle') {
             userShape = new Circle(answers["shape-color"])
         } else if (userShapeInput === 'Rectangle') {
@@ -63,6 +63,7 @@ async function init() {
         } else {
             console.log('Shape input invalid.')
         }
+        // creates main svg object passing in all data creating svgString
     const svg = new Svg()
     if (userShapeInput === 'Ellipse') {
         svg.setTextElement(answers["text"], answers["text-color"], 125, 100)
@@ -70,12 +71,12 @@ async function init() {
         svg.setTextElement(answers["text"], answers["text-color"], 150, 125)
     svg.setShape(userShape)
     svgString = svg.render()
-
+    // created new file with svg obj as data
     fs.writeFile('logo.svg', svgString, (err) => {
         if (err) return console.log(err)
     })
 
     console.log('Generated logo.svg')
 }
-
+// starts application
 init()
