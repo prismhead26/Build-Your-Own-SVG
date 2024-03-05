@@ -13,16 +13,23 @@
   - [Questions](#Questions)
 
   ## Installation Instructions:
-  Step 1: Clone repository 
+  Step 1: Clone repository
+  <br>
   Step 2: Install Nodejs 
+  <br>
   Step 3: Install a cource-code editor like VsCode
   
   ## Usage Instructions:
   Step 1: Open in VsCode(preferred) or another source-code editor 
+  <br>
   Step 2: Open integrated terminal once in the main main folder 
+  <br>
   Step 3: "run npm i" / "sudo npm i" in the terminal to install the required dependencies. 
+  <br>
   Step 4: Now to run the file, Enter "npm run start" or "node index.js"
+  <br>
   Step 5: The appliction will run and user will be presented with a series of inquirer questions inside the command line interface.
+  <br>
   Step 6: Once completed, user will be notified within the cmd terminal thus creating the "logo.svg." Feel free to rename.
 
   ## Links
@@ -40,7 +47,7 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  (https://opensource.org/licenses/MIT)
   
   ## Questions:
-  For additonal questions or concerns, feel free to contact me via [prismhead26@gmail.com](prismhead26@gmail.com). 
+  For additonal questions or concerns, feel free to contact me via [prismhead26@gmail.com](http://prismhead26@gmail.com). 
   You can also find me on Github at [prismhead26](https://github.com/prismhead26).
   
   © 2024 Aiden Wahed. All Rights Reserved.
