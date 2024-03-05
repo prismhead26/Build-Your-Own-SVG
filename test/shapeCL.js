@@ -25,7 +25,7 @@ class Square extends Shape {
 }
 class Ellipse extends Shape {
     render() {
-        return `<ellipse cx="75" cy="75" rx="20" ry="5" height="200" width="100%" fill="${this.color}"/>`
+        return `<ellipse cx="120" cy="80" rx="100" ry="50" height="200" width="100%" fill="${this.color}"/>`
     }
 }
 class Triangle extends Shape {

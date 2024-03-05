@@ -33,8 +33,8 @@ class Svg {
     render(){
         return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">${this.shapeBuilder}${this.textBuilder}</svg>`
     }
-    setTextElement( text, color ){
-        this.textBuilder = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
+    setTextElement( text, color, textX, textY ){
+        this.textBuilder = `<text x="${textX}" y="${textY}" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`
     }
     setShape(shape){
         this.shapeBuilder = shape.render()
@@ -64,7 +64,10 @@ async function init() {
             console.log('Shape input invalid.')
         }
     const svg = new Svg()
-    svg.setTextElement(answers["text"], answers["text-color"])
+    if (userShapeInput === 'Ellipse') {
+        svg.setTextElement(answers["text"], answers["text-color"], 125, 100)
+    } else
+        svg.setTextElement(answers["text"], answers["text-color"], 150, 125)
     svg.setShape(userShape)
     svgString = svg.render()
 
