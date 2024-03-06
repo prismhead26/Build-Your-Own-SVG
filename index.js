@@ -1,6 +1,6 @@
 
 const inquirer = require('inquirer')
-const { Circle, Rectangle, Square, Ellipse, Triangle } = require('./test/shapeCL')
+const { Circle, Rectangle, Square, Ellipse, Triangle } = require('./test/shapeClass')
 const fs = require('fs')
 
 // prompted questions
