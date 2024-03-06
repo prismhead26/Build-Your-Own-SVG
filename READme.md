@@ -34,7 +34,9 @@
 
   ## Links
   Screenshots:
-  ![Screenshot](./assets/images/Screenshot.png)
+  ![Application](./assets/images/App_Screenshot.png)
+
+  ![Testing](./assets/images/Screenshot.png)
 
 
   Youtube:
